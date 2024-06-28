@@ -15,6 +15,9 @@ set-origins() {
 # Update origin for .files
 set-origins ~ BosEriko/ubuntu
 
+# Update origin for zsh
+set-origins ~/.files/zsh BosEriko/zsh
+
 # Update origin for password
 set-origins $STORAGE/Password BosEriko/password
 
