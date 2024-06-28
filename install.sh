@@ -3,7 +3,7 @@
 sudo apt install -y git
 cd ~
 git init
-git remote add origin https://github.com/BosEriko/debian.git
+git remote add origin https://github.com/BosEriko/ubuntu.git
 git fetch
 git reset --hard origin/master
 git submodule update --init

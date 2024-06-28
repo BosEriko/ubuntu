@@ -1,10 +1,10 @@
-# Debian (Distro)
-This is my personal configuration for Debian. Feel free to use it or fork it.
+# Ubuntu (Distro)
+This is my personal configuration for Ubuntu. Feel free to use it or fork it.
 
 ## Sync the repository
 To start you must first sync the home directory. Run the command below to do so.
 ```sh
-sudo apt update -y && sudo apt upgrade -y && sudo apt install -y curl && curl -fsSL https://raw.githubusercontent.com/BosEriko/debian/HEAD/install.sh | sh
+sudo apt update -y && sudo apt upgrade -y && sudo apt install -y curl && curl -fsSL https://raw.githubusercontent.com/BosEriko/ubuntu/HEAD/install.sh | sh
 ```
 
 ## Setup Environment Variables
