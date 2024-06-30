@@ -12,5 +12,5 @@ source ~/.files/zsh/node.z.sh
 source ~/.files/zsh/ruby.z.sh
 source ~/.files/zsh/git.z.sh
 source ~/.files/zsh/personal.z.sh
-source ~/.files/zsh/start-session.z.sh
-source ~/.files/zsh/end-session.z.sh
+source ~/.files/zsh/start.z.sh
+source ~/.files/zsh/end.z.sh
