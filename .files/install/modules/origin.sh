@@ -1,54 +1,43 @@
 #!/usr/bin/env sh
 
-# Set origins
-set-origins() {
-  (cd $1 && git remote rm origin)
-  (cd $1 && git remote add origin git@github.com:$2.git)
-  (cd $1 && git remote add github git@github.com:$2.git)
-  (cd $1 && git remote add gitlab git@gitlab.com:$2.git)
-  (cd $1 && git remote add bitbucket git@bitbucket.org:$2.git)
-  (cd $1 && git remote set-url --add --push origin git@github.com:$2.git)
-  (cd $1 && git remote set-url --add --push origin git@gitlab.com:$2.git)
-  (cd $1 && git remote set-url --add --push origin git@bitbucket.org:$2.git)
+# Function to set Git remote origins
+set_origins() {
+  local directory="$1"
+  local username="$2"
+
+  (
+    cd "$directory" &&
+    git remote rm origin &&
+    git remote add origin git@github.com:"$username".git &&
+    git remote add github git@github.com:"$username".git &&
+    git remote add gitlab git@gitlab.com:"$username".git &&
+    git remote add bitbucket git@bitbucket.org:"$username".git &&
+    git remote set-url --add --push origin git@github.com:"$username".git &&
+    git remote set-url --add --push origin git@gitlab.com:"$username".git &&
+    git remote set-url --add --push origin git@bitbucket.org:"$username".git
+  )
 }
 
-# Update origin for .files
-set-origins ~ BosEriko/ubuntu
+# Define repositories and their respective usernames
+repositories=(
+  "~ BosEriko/ubuntu"
+  "~/.files/zsh BosEriko/zsh"
+  "$STORAGE/Password BosEriko/password"
+  "$STORAGE/Obsidian BosEriko/obsidian"
+  "$STORAGE/Obsidian/personal BosEriko/obsidian-personal"
+  "$STORAGE/Obsidian/games BosEriko/obsidian-games"
+  "$STORAGE/Obsidian/professional BosEriko/obsidian-professional"
+  "$STORAGE/Obsidian/til BosEriko/obsidian-til"
+  "$STORAGE/Obsidian/morning-ritual BosEriko/obsidian-morning-ritual"
+  "$STORAGE/Obsidian/daily-journal BosEriko/obsidian-daily-journal"
+  "$STORAGE/Obsidian/blogs BosEriko/obsidian-blogs"
+  "$STORAGE/Obsidian/dreams BosEriko/obsidian-dreams"
+  "$STORAGE/Obsidian/twisuandbosu BosEriko/obsidian-twisuandbosu"
+)
 
-# Update origin for zsh
-set-origins ~/.files/zsh BosEriko/zsh
+# Loop through repositories and update origins
+for repo in "${repositories[@]}"; do
+  set_origins $repo
+done
 
-# Update origin for password
-set-origins $STORAGE/Password BosEriko/password
-
-# Update origin for obsidian
-set-origins $STORAGE/Obsidian BosEriko/obsidian
-
-# Update origin for obsidian-personal
-set-origins $STORAGE/Obsidian/personal BosEriko/obsidian-personal
-
-# Update origin for obsidian-games
-set-origins $STORAGE/Obsidian/games BosEriko/obsidian-games
-
-# Update origin for obsidian-professional
-set-origins $STORAGE/Obsidian/professional BosEriko/obsidian-professional
-
-# Update origin for obsidian-til
-set-origins $STORAGE/Obsidian/til BosEriko/obsidian-til
-
-# Update origin for obsidian-morning-ritual
-set-origins $STORAGE/Obsidian/morning-ritual BosEriko/obsidian-morning-ritual
-
-# Update origin for obsidian-daily-journal
-set-origins $STORAGE/Obsidian/daily-journal BosEriko/obsidian-daily-journal
-
-# Update origin for obsidian-blogs
-set-origins $STORAGE/Obsidian/blogs BosEriko/obsidian-blogs
-
-# Update origin for obsidian-dreams
-set-origins $STORAGE/Obsidian/dreams BosEriko/obsidian-dreams
-
-# Update origin for obsidian-twisuandbosu
-set-origins $STORAGE/Obsidian/twisuandbosu BosEriko/obsidian-twisuandbosu
-
-echo "Installing: Remote origins has been updated."
+echo "Installation complete: Remote origins have been updated."
