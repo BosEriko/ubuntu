@@ -1,11 +1,19 @@
 #!/usr/bin/env sh
 
 # Generate SSH Key
-ssh-keygen -C bos.eriko@gmail.com
+ssh-keygen -t rsa -b 4096 -C "bos.eriko@gmail.com"
 echo "Installing: SSH Key has been generated."
 
-# Add GitHub, GitLab and Bitbucket
-ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
-ssh-keyscan -t rsa bitbucket.org >> ~/.ssh/known_hosts
-echo "Installing: Add GitHub, GitLab and Bitbucket to known_hosts"
+# Array of hosts to add to known_hosts
+hosts=(
+  github.com
+  gitlab.com
+  bitbucket.org
+)
+
+# Add SSH keys for GitHub, GitLab, and Bitbucket to known_hosts
+for host in "${hosts[@]}"; do
+  ssh-keyscan -t rsa "$host" >> ~/.ssh/known_hosts
+done
+
+echo "Installation complete: SSH keys have been added to known_hosts."
