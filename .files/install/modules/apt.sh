@@ -1,21 +1,32 @@
 #!/usr/bin/env sh
 
-# Install packages
-sudo apt install -y zsh                                                                            # Zsh is a shell designed for interactive use (http://www.zsh.org/)
-sudo apt install -y rbenv                                                                          # Groom your app’s Ruby environment (https://github.com/rbenv/rbenv)
-sudo apt install -y figlet                                                                         # FIGlet is a program for making large letters out of ordinary text (http://www.figlet.org/)
+# Update package lists
+sudo apt update
 
-# PostgreSQL, also known as Postgres, is a free and open-source relational database management system (https://www.postgresql.org)
-sudo apt install -y postgresql
-sudo apt install -y postgresql-contrib
+# Declare an array of packages to be installed
+packages=(
+  zsh                          # Zsh is a shell designed for interactive use (http://www.zsh.org/)
+  rbenv                        # Groom your app’s Ruby environment (https://github.com/rbenv/rbenv)
+  figlet                       # FIGlet is a program for making large letters out of ordinary text (http://www.figlet.org/)
+  postgresql                   # PostgreSQL, a free and open-source relational database management system (https://www.postgresql.org)
+  postgresql-contrib           # Additional utilities for PostgreSQL
+)
 
-# Redis is an in-memory database (https://github.com/redis/redis)
+# Install packages from the array
+sudo apt install -y "${packages[@]}"
+
+# Install Redis
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-sudo apt update -y; sudo apt install -y redis;
+sudo apt update
+sudo apt install -y redis
 
-# Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine (https://nodejs.org/en/)
+# Install Node.js
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 sudo apt install -y nodejs
 
-echo "Installing: Apt apps have been installed."
+# Clean up unused packages and cache
+sudo apt autoremove -y
+sudo apt clean
+
+echo "Installation complete: All specified packages have been installed."
