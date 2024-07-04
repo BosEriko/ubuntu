@@ -1,8 +1,5 @@
 #!/usr/bin/env sh
 
-# Update package lists
-sudo apt update
-
 # Declare an array of packages to be installed
 packages=(
   zsh                          # Zsh is a shell designed for interactive use (http://www.zsh.org/)
