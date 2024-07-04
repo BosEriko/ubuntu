@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 ~/.files/install/modules/apt.sh
 ~/.files/install/modules/fzf.sh

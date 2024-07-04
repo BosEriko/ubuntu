@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 # Ruby build (https://github.com/rbenv/ruby-build)
 mkdir -p "$(rbenv root)"/plugins

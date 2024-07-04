@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 cd ~
 sudo apt update -y

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 # Pull Password (https://github.com/BosEriko/password)
 git clone https://github.com/BosEriko/password.git $STORAGE/Password

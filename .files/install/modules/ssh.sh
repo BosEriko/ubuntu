@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 # Generate SSH Key
 ssh-keygen -t rsa -b 4096 -C "bos.eriko@gmail.com"

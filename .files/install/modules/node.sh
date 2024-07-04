@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 # Install Yarn (https://github.com/yarnpkg/yarn)
 npm install --global yarn

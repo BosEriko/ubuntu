@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 # Make the directories for Personal/Work
 mkdir -p ~/Documents/Codes/Work ~/Documents/Codes/Personal
