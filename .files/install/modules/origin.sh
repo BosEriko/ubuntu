@@ -6,14 +6,14 @@ set_origins() {
   local username="$2"
 
   (
-    cd "$directory" &&
-    git remote rm origin &&
-    git remote add origin git@github.com:"$username".git &&
-    git remote add github git@github.com:"$username".git &&
-    git remote add gitlab git@gitlab.com:"$username".git &&
-    git remote add bitbucket git@bitbucket.org:"$username".git &&
-    git remote set-url --add --push origin git@github.com:"$username".git &&
-    git remote set-url --add --push origin git@gitlab.com:"$username".git &&
+    cd "$directory"
+    git remote rm origin
+    git remote add origin git@github.com:"$username".git
+    git remote add github git@github.com:"$username".git
+    git remote add gitlab git@gitlab.com:"$username".git
+    git remote add bitbucket git@bitbucket.org:"$username".git
+    git remote set-url --add --push origin git@github.com:"$username".git
+    git remote set-url --add --push origin git@gitlab.com:"$username".git
     git remote set-url --add --push origin git@bitbucket.org:"$username".git
   )
 }
