@@ -22,7 +22,6 @@ set_origins() {
 repositories=(
   "~ BosEriko/ubuntu"
   "~/.files/zsh BosEriko/zsh"
-  "$STORAGE/Password BosEriko/password"
   "$STORAGE/Obsidian BosEriko/obsidian"
   "$STORAGE/Obsidian/personal BosEriko/obsidian-personal"
   "$STORAGE/Obsidian/games BosEriko/obsidian-games"
