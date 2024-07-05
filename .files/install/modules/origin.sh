@@ -18,20 +18,10 @@ set_origins() {
   )
 }
 
-# Define repositories and their respective usernames
+# Define directory and repository path
 repositories=(
   "~ BosEriko/ubuntu"
   "~/.files/zsh BosEriko/zsh"
-  "$STORAGE/Obsidian BosEriko/obsidian"
-  "$STORAGE/Obsidian/personal BosEriko/obsidian-personal"
-  "$STORAGE/Obsidian/games BosEriko/obsidian-games"
-  "$STORAGE/Obsidian/professional BosEriko/obsidian-professional"
-  "$STORAGE/Obsidian/til BosEriko/obsidian-til"
-  "$STORAGE/Obsidian/morning-ritual BosEriko/obsidian-morning-ritual"
-  "$STORAGE/Obsidian/daily-journal BosEriko/obsidian-daily-journal"
-  "$STORAGE/Obsidian/blogs BosEriko/obsidian-blogs"
-  "$STORAGE/Obsidian/dreams BosEriko/obsidian-dreams"
-  "$STORAGE/Obsidian/twisuandbosu BosEriko/obsidian-twisuandbosu"
 )
 
 # Loop through repositories and update origins

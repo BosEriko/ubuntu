@@ -9,7 +9,6 @@
 ~/.files/install/modules/heroku.sh
 ~/.files/install/modules/mkdir.sh
 ~/.files/install/modules/zsh.sh
-~/.files/install/modules/pull.sh
 ~/.files/install/modules/origin.sh
 ~/.files/install/modules/ssh.sh
 ~/.files/install/modules/reset.sh
