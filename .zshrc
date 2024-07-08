@@ -11,3 +11,4 @@ source ~/.files/zsh/source.z.sh
 source ~/.files/zsh/git.z.sh
 source ~/.files/zsh/personal.z.sh
 source ~/.files/zsh/session.z.sh
+cd ~
