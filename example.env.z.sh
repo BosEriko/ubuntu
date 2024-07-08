@@ -1,6 +1,9 @@
 PASSWORD="XXXX"
 STORAGE="XXXX"
 
+# Windows User Directory
+WINDOWS_USER_DIRECTORY="XXXX"
+
 # Configuration Directories
 GLAZE_DIRECTORY="XXXX"
 VS_DIRECTORY="XXXX"
