@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Install Node.js
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+sudo apt install -y nodejs
+echo "Installing: Node has been installed."
+
 # Install Yarn (https://github.com/yarnpkg/yarn)
 npm install --global yarn
 

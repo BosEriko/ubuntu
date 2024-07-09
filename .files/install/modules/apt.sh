@@ -12,16 +12,6 @@ packages=(
 # Install packages from the array
 sudo apt install -y "${packages[@]}"
 
-# Install Redis
-curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-sudo apt update
-sudo apt install -y redis
-
-# Install Node.js
-curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-sudo apt install -y nodejs
-
 # Clean up unused packages and cache
 sudo apt autoremove -y
 sudo apt clean

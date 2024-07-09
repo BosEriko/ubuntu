@@ -1,9 +1,10 @@
 #!/bin/bash
 
 ~/.files/install/modules/apt.sh
+~/.files/install/modules/redis.sh
+~/.files/install/modules/node.sh
 ~/.files/install/modules/fzf.sh
 ~/.files/install/modules/youtube.sh
-~/.files/install/modules/node.sh
 ~/.files/install/modules/docker.sh
 ~/.files/install/modules/ruby.sh
 ~/.files/install/modules/mkdir.sh
