@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "${B_GREEN}=== APT Packages being installed ===${RESET}"
+
 # Declare an array of packages to be installed
 packages=(
   zsh                          # Zsh is a shell designed for interactive use (http://www.zsh.org/)
@@ -16,4 +18,4 @@ sudo apt install -y "${packages[@]}"
 sudo apt autoremove -y
 sudo apt clean
 
-echo "Installation complete: All specified packages have been installed."
+echo "${B_GREEN}=== APT Packages installed ===${RESET}"
