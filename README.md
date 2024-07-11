@@ -16,7 +16,7 @@ cp ~/example.env.z.sh ~/env.z.sh && code ~/env.z.sh
 ## Installation Script
 After setting up the environment variables you can now proceed to the installation script. Run the command below to start installing.
 ```sh
-source ~/env.z.sh && source ~/.files/zsh/alias.z.sh && sudo ~/.files/install/entry.sh
+source ~/env.z.sh && source ~/.files/zsh/alias.z.sh && source ~/.files/zsh/colors.z.sh && sudo ~/.files/install/entry.sh
 ```
 
 ## Call to action
