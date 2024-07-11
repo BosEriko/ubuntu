@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "${B_GREEN}=== APT Packages being installed ===${RESET}"
+echo "${B_YELLOW}=== Installing APT ===${RESET}"
 
 # Declare an array of packages to be installed
 packages=(
@@ -18,4 +18,4 @@ sudo apt install -y "${packages[@]}"
 sudo apt autoremove -y
 sudo apt clean
 
-echo "${B_GREEN}=== APT Packages installed ===${RESET}"
+echo "${B_GREEN}=== APT installed ===${RESET}"

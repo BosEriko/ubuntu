@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "${B_YELLOW}=== Installing Ruby ===${RESET}"
+
 # Ruby build (https://github.com/rbenv/ruby-build)
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
@@ -11,7 +13,6 @@ git -C "$(rbenv root)"/plugins/ruby-build pull
 rbenv install 3.2.2
 rbenv global 3.2.2
 rbenv rehash
-echo "Installing: rbenv has been initialized."
 
 # Install packages using Gem (https://rubygems.org/)
 gems=(
@@ -25,4 +26,4 @@ for gem in "${gems[@]}"; do
   gem install "$gem"
 done
 
-echo "Installing: Gem apps have been installed."
+echo "${B_GREEN}=== Ruby Installed ===${RESET}"

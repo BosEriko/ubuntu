@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "${B_YELLOW}=== Updating Origin ===${RESET}"
+
 # Function to set Git remote origins
 set_origins() {
   local directory="$1"
@@ -29,4 +31,4 @@ for repo in "${repositories[@]}"; do
   set_origins $repo
 done
 
-echo "Installation complete: Remote origins have been updated."
+echo "${B_GREEN}=== Origin Updated ===${RESET}"
