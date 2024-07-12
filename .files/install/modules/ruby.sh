@@ -20,6 +20,10 @@ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
+# Verify Installation
+echo "Current Ruby version:"
+ruby -v
+
 # Initialize rbenv and set global ruby version (https://github.com/rbenv/rbenv)
 rbenv install 2.7.1
 rbenv global 2.7.1
