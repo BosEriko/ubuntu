@@ -1,5 +1,9 @@
 #!/bin/bash
 
+B_YELLOW='\033[1;33m'
+B_GREEN='\033[1;32m'
+RESET='\033[0m'
+
 echo "${B_YELLOW}=== Installing Redis ===${RESET}"
 
 # Install Redis
@@ -9,3 +13,5 @@ sudo apt update
 sudo apt install -y redis
 
 echo "${B_GREEN}=== Redis Installed ===${RESET}"
+
+echo "\n\n\n"

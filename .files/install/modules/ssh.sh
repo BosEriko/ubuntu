@@ -1,5 +1,9 @@
 #!/bin/bash
 
+B_YELLOW='\033[1;33m'
+B_GREEN='\033[1;32m'
+RESET='\033[0m'
+
 echo "${B_YELLOW}=== Generating SSH Key ===${RESET}"
 
 # Generate SSH Key
@@ -18,3 +22,5 @@ for host in "${hosts[@]}"; do
 done
 
 echo "${B_GREEN}=== SSH Key Generated ===${RESET}"
+
+echo "\n\n\n"

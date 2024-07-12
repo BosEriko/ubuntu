@@ -1,5 +1,9 @@
 #!/bin/bash
 
+B_YELLOW='\033[1;33m'
+B_GREEN='\033[1;32m'
+RESET='\033[0m'
+
 echo "${B_YELLOW}=== Updating Origin ===${RESET}"
 
 # Function to set Git remote origins
@@ -32,3 +36,5 @@ for repo in "${repositories[@]}"; do
 done
 
 echo "${B_GREEN}=== Origin Updated ===${RESET}"
+
+echo "\n\n\n"

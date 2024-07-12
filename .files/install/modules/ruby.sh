@@ -1,5 +1,9 @@
 #!/bin/bash
 
+B_YELLOW='\033[1;33m'
+B_GREEN='\033[1;32m'
+RESET='\033[0m'
+
 echo "${B_YELLOW}=== Installing Ruby ===${RESET}"
 
 # Ruby build (https://github.com/rbenv/ruby-build)
@@ -27,3 +31,5 @@ for gem in "${gems[@]}"; do
 done
 
 echo "${B_GREEN}=== Ruby Installed ===${RESET}"
+
+echo "\n\n\n"

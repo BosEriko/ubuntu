@@ -1,5 +1,9 @@
 #!/bin/bash
 
+B_YELLOW='\033[1;33m'
+B_GREEN='\033[1;32m'
+RESET='\033[0m'
+
 echo "${B_YELLOW}=== Installing ZSH ===${RESET}"
 
 # Install oh-my-zsh (https://github.com/robbyrussell/oh-my-zsh)
@@ -12,3 +16,5 @@ chsh -s /bin/zsh
 yes | sudo curl -o /usr/share/zsh-antigen/antigen.zsh -sL git.io/antigen
 
 echo "${B_GREEN}=== ZSH Installed ===${RESET}"
+
+echo "\n\n\n"

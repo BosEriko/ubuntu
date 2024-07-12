@@ -1,5 +1,9 @@
 #!/bin/bash
 
+B_YELLOW='\033[1;33m'
+B_GREEN='\033[1;32m'
+RESET='\033[0m'
+
 echo "${B_YELLOW}=== Installing APT ===${RESET}"
 
 # Declare an array of packages to be installed
@@ -19,3 +23,5 @@ sudo apt autoremove -y
 sudo apt clean
 
 echo "${B_GREEN}=== APT installed ===${RESET}"
+
+echo "\n\n\n"
