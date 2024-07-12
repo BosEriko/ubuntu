@@ -26,9 +26,10 @@ rbenv global $RUBY_VERSION
 rbenv shell $RUBY_VERSION
 
 # Verify Installation
+echo -e "\n\n\n"
 echo "=== Current Ruby Version ==="
 ruby -v
-echo "\n\n"
+echo -e "\n\n\n"
 
 # Install packages using Gem (https://rubygems.org/)
 gems=(
