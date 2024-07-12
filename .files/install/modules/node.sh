@@ -11,7 +11,7 @@ npm install --global yarn
 curl -fsSL https://fnm.vercel.app/install | bash
 
 # Install packages using NPM (https://nodejs.org/)
-yarn global add webtorrent-cli              # WebTorrent is the first BitTorrent client that works in the browser (https://github.com/webtorrent/webtorrent-cli)
+yarn global add webtorrent-cli
 
 # Avoid running postinstall scripts from packages
 npm config set ignore-scripts true
