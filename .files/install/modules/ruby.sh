@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Remove Ruby
+sudo apt-get purge ruby ruby-dev
+sudo apt-get autoremove
+
 # Ruby build (https://github.com/rbenv/ruby-build)
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
