@@ -8,8 +8,8 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 git -C "$(rbenv root)"/plugins/ruby-build pull
 
 # Initialize rbenv and set global ruby version (https://github.com/rbenv/rbenv)
-rbenv install 2.7.1
-rbenv global 2.7.1
+rbenv install 3.0.2
+rbenv global 3.0.2
 rbenv rehash
 
 # Install packages using Gem (https://rubygems.org/)
