@@ -4,7 +4,7 @@
 sudo apt-get purge -y ruby ruby-dev
 sudo apt-get autoremove -y
 
-# Remove Ruby
+# Install Rbenv
 sudo apt install -y rbenv
 
 # Ruby build (https://github.com/rbenv/ruby-build)
@@ -34,5 +34,5 @@ gems=(
 
 # Install gems using Gem
 for gem in "${gems[@]}"; do
-  sudo gem install "$gem"
+  gem install "$gem"
 done
