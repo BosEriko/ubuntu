@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # Make the directories for Personal/Work
-mkdir -p ~/Documents/Codes/Work ~/Documents/Codes/Personal
+cd ~ && mkdir -p Documents/Codes/Work
+cd ~ && mkdir -p Documents/Codes/Personal
 
 # Make the directory for your Movies
-mkdir -p $STORAGE/Movies
+cd ~ && mkdir -p $STORAGE/Movies
 
 # Make the directory for your Anime
-mkdir -p $STORAGE/Anime
+cd ~ && mkdir -p $STORAGE/Anime
 
 # Make the directory for YouTube videos
-mkdir -p $STORAGE/YouTube
+cd ~ && mkdir -p $STORAGE/YouTube
