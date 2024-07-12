@@ -7,6 +7,7 @@ mkdir -p ~/Documents/Codes/Work ~/Documents/Codes/Personal
 mkdir -p $STORAGE/Movies
 
 # Make the directory for your Anime
+mkdir -p $STORAGE/Anime
 
 # Make the directory for YouTube videos
 mkdir -p $STORAGE/YouTube
