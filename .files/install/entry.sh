@@ -8,7 +8,7 @@ install_module() {
     local module=$1
     local module_lower=$(echo "$module" | tr '[:upper:]' '[:lower:]')
     echo -e "${B_YELLOW}=== Initializing $module ===${RESET}"
-    cd ~ && sudo .files/install/modules/${module_lower}.sh
+    cd ~ && .files/install/modules/${module_lower}.sh
     echo -e "${B_GREEN}=== $module Initialized ===${RESET}"
     echo -e "\n\n\n"
 }
@@ -26,4 +26,4 @@ install_module "Origin"
 install_module "SSH"
 
 echo -e "${B_YELLOW}=== Restarting Shell ===${RESET}"
-sudo ~/.files/install/modules/reset.sh
+cd ~ && .files/install/modules/reset.sh
