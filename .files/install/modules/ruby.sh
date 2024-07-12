@@ -4,17 +4,15 @@
 sudo apt-get purge -y ruby ruby-dev
 sudo apt-get autoremove -y
 
-# Add Ruby back using rbenv
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+# Remove Ruby
+sudo apt install -y rbenv
 
 # Ruby build (https://github.com/rbenv/ruby-build)
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+mkdir -p "$(rbenv root)"/plugins
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
-# Source Bash
-source ~/.bashrc
+# Update ruby build list (https://github.com/rbenv/ruby-build)
+git -C "$(rbenv root)"/plugins/ruby-build pull
 
 # Initialize rbenv and set global ruby version (https://github.com/rbenv/rbenv)
 rbenv install 2.7.1
