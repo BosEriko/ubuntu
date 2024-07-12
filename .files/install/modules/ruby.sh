@@ -20,7 +20,7 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 # Initialize rbenv and set global ruby version (https://github.com/rbenv/rbenv)
-RUBY_VERSION=2.7.1
+RUBY_VERSION=3.3.3
 rbenv install $RUBY_VERSION
 rbenv global $RUBY_VERSION
 rbenv shell $RUBY_VERSION
