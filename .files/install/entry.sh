@@ -24,6 +24,6 @@ install_module "mkdir"
 install_module "zsh"
 install_module "Origin"
 install_module "SSH"
+install_module "Reset"
 
-echo -e "${B_YELLOW}=== Restarting Shell ===${RESET}"
-cd ~ && .files/install/modules/reset.sh
+figlet "Welcome back, Bos!" | lolcat
