@@ -26,4 +26,4 @@ install_module "Origin"
 install_module "SSH"
 install_module "Reset"
 
-figlet "Welcome back, Bos!" | lolcat
+cd ~ && figlet "Welcome back, Bos!" | lolcat
