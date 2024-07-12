@@ -5,7 +5,7 @@ curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 sudo apt install -y nodejs
 
 # Install Yarn (https://github.com/yarnpkg/yarn)
-npm install --global yarn
+sudo npm install --global yarn
 
 # Install fnm (https://github.com/Schniz/fnm)
 curl -fsSL https://fnm.vercel.app/install | bash
