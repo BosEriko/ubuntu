@@ -8,7 +8,7 @@ sudo apt install -y nodejs
 sudo npm install --global yarn
 
 # Install fnm (https://github.com/Schniz/fnm)
-curl -fsSL https://fnm.vercel.app/install | bash
+cd ~ && curl -fsSL https://fnm.vercel.app/install | bash -s -- --install-dir "~/.fnm" --skip-shell
 
 # Install packages using NPM (https://nodejs.org/)
 yarn global add webtorrent-cli
