@@ -7,6 +7,7 @@ packages=(
   figlet                       # FIGlet is a program for making large letters out of ordinary text (http://www.figlet.org/)
   postgresql                   # PostgreSQL, a free and open-source relational database management system (https://www.postgresql.org)
   postgresql-contrib           # Additional utilities for PostgreSQL
+  zsh-antigen                  # The plugin manager for zsh
 )
 
 # Install packages from the array
