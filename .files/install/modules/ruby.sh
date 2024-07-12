@@ -14,6 +14,12 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 # Update ruby build list (https://github.com/rbenv/ruby-build)
 git -C "$(rbenv root)"/plugins/ruby-build pull
 
+# Source rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
 # Initialize rbenv and set global ruby version (https://github.com/rbenv/rbenv)
 rbenv install 2.7.1
 rbenv global 2.7.1
@@ -28,5 +34,5 @@ gems=(
 
 # Install gems using Gem
 for gem in "${gems[@]}"; do
-  gem install "$gem"
+  sudo gem install "$gem"
 done
