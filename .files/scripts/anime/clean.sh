@@ -8,7 +8,7 @@ anime_directory="$STORAGE/Anime"
 
 # Loop through each .mkv file in the directory
 for anime in "$anime_directory"/*.mkv; do
-  if [ -f "$anime" ]; then
+  if [ -n "$anime" ] && [ -f "$anime" ]; then
     # Extract the base name without the .mkv extension and clean it up
     new_name=$(
         basename "$anime" .mkv |
