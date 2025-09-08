@@ -4,7 +4,9 @@
 sudo apt-get purge -y ruby ruby-dev
 sudo apt-get autoremove -y
 
-# Install Rbenv
+# Install Prerequisites
+sudo apt install -y libffi-dev
+sudo apt install -y libyaml-dev
 sudo apt install -y rbenv
 
 # Ruby build (https://github.com/rbenv/ruby-build)
