@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Generate SSH Key
-yes | ssh-keygen -t rsa -b 4096 -C "bos.eriko@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "boseriko@duck.com" -f ~/.ssh/id_rsa -N ""
 
 # Array of hosts to add to known_hosts
 hosts=(
