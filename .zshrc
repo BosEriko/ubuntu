@@ -5,10 +5,10 @@ source ~/.files/zsh/plugins/ubuntu.z.sh
 source ~/.files/zsh/dir.z.sh
 source ~/.files/zsh/alias/ubuntu.z.sh
 source ~/.files/zsh/docker.z.sh
-source ~/.files/zsh/projects.z.sh
+source ~/.files/zsh/projects/ubuntu.z.sh
 source ~/.files/zsh/source/ubuntu.z.sh
 source ~/.files/zsh/git.z.sh
-source ~/.files/zsh/personal.z.sh
+source ~/.files/zsh/personal/ubuntu.z.sh
 source ~/.files/zsh/session.z.sh
 source ~/.files/zsh/hotfix/ubuntu.z.sh
 source ~/.files/zsh/todo.z.sh
