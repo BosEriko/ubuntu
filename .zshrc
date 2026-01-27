@@ -9,6 +9,6 @@ source ~/.files/zsh/projects/ubuntu.z.sh
 source ~/.files/zsh/source/ubuntu.z.sh
 source ~/.files/zsh/git.z.sh
 source ~/.files/zsh/personal/ubuntu.z.sh
-source ~/.files/zsh/session.z.sh
+source ~/.files/zsh/session/ubuntu.z.sh
 source ~/.files/zsh/hotfix/ubuntu.z.sh
 source ~/.files/zsh/todo.z.sh
