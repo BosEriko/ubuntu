@@ -11,4 +11,4 @@ source ~/.files/zsh/git.z.sh
 source ~/.files/zsh/personal/ubuntu.z.sh
 source ~/.files/zsh/session/ubuntu.z.sh
 source ~/.files/zsh/hotfix/ubuntu.z.sh
-source ~/.files/zsh/todo.z.sh
+source ~/.files/zsh/todo/ubuntu.z.sh
